@@ -14,7 +14,7 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-                        label = "DVORAK";
+                        label = "QWERTY";
 // -----------------------------------------------------------------------------------------
 // |  TAB |  '  |  ,  |  .  |  p  |  y  |   |  f  |  g   |  c  |  r  |  l  | BKSP |
 // | CTRL |  a  |  o  |  e  |  u  |  i  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
