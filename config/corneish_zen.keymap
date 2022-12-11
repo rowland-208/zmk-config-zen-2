@@ -19,20 +19,16 @@
    &none  &mt LS(SQT) SQT    &mt LS(COMMA) COMMA  &mt LS(DOT) DOT  &mt LS(P) P  &mt LS(Y) Y         &mt LS(F) F  &mt LS(G) G  &mt LS(C) C  &mt LS(R) R  &mt LS(L) L  &none
    &none  &mt LS(A) A        &mt LS(O) O          &mt LS(E) E      &mt LS(U) U  &mt LS(I) I         &mt LS(D) D  &mt LS(H) H  &mt LS(T) T  &mt LS(N) N  &mt LS(S) S  &none
    &none  &mt LS(SEMI) SEMI  &mt LS(Q) Q          &mt LS(J) J      &mt LS(K) K  &mt LS(X) X         &mt LS(B) B  &mt LS(M) M  &mt LS(W) W  &mt LS(V) V  &mt LS(Z) Z  &none
-                                                  &kp LCMD         &lt 1 ESC    &kp BSPC            &kp SPACE    &lt 1 RET    &RCTRL
+                                                  &kp LCMD         &lt 1 ESC    &kp BSPC            &kp SPACE    &lt 1 RET    &kp RCTRL
                         >;
                 };
                 code_layer {
                         label = "CODE";
                         bindings = <
-   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                          	        &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
-//   &none  &trans       &mt LS(GRAVE) GRAVE  &mt LS(FSLH) FSLH  &mt LS(BSLH) BSLH  &kp PG_UP         &mt LS(MINUS) MINUS  &mt LS(EQUAL) EQUAL  &mt LS(LBKT) LBKT  &mt LS(RBKT) RBKT  &trans       &none
-//   &none  &mt LS(1) 1  &mt LS(2) 2          &mt LS(3) 3        &mt LS(4) 4        &mt LS(5) 5       &mt LS(6) 6          &mt LS(7) 7          &mt LS(8) 8        &mt LS(9) 9        &mt LS(0) 0  &none
-//   &none  &kp LCTRL    &kp LALT             &kp LCMD           &kp LSHFT          &kp PG_DN         &kp TAB              &kp LEFT             &kp DOWN           &kp UP             &kp RIGHT    &none
-//                          	            &trans             &none              &kp LA(BSPC)      &kp TAB              &none                &trans
+   &none  &trans       &mt LS(GRAVE) GRAVE  &mt LS(FSLH) FSLH  &mt LS(BSLH) BSLH  &kp PG_UP         &mt LS(MINUS) MINUS  &mt LS(EQUAL) EQUAL  &mt LS(LBKT) LBKT  &mt LS(RBKT) RBKT  &trans       &none
+   &none  &mt LS(1) 1  &mt LS(2) 2          &mt LS(3) 3        &mt LS(4) 4        &mt LS(5) 5       &mt LS(6) 6          &mt LS(7) 7          &mt LS(8) 8        &mt LS(9) 9        &mt LS(0) 0  &none
+   &none  &kp LCTRL    &kp LALT             &kp LCMD           &kp LSHFT          &kp PG_DN         &kp TAB              &kp LEFT             &kp DOWN           &kp UP             &kp RIGHT    &none
+                          	            &trans             &none              &kp LA(BSPC)      &kp TAB              &none                &trans
                         >;
                 };
         };
