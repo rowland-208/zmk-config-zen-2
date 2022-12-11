@@ -19,8 +19,7 @@
    &none  &mt LS(SQT) SQT    &mt LS(COMMA) COMMA  &mt LS(DOT) DOT  &mt LS(P) P  &mt LS(Y) Y         &mt LS(F) F  &mt LS(G) G  &mt LS(C) C  &mt LS(R) R  &mt LS(L) L  &none
    &none  &mt LS(A) A        &mt LS(O) O          &mt LS(E) E      &mt LS(U) U  &mt LS(I) I         &mt LS(D) D  &mt LS(H) H  &mt LS(T) T  &mt LS(N) N  &mt LS(S) S  &none
    &none  &mt LS(SEMI) SEMI  &mt LS(Q) Q          &mt LS(J) J      &mt LS(K) K  &mt LS(X) X         &mt LS(B) B  &mt LS(M) M  &mt LS(W) W  &mt LS(V) V  &mt LS(Z) Z  &none
-//                                                  &kp LCMD         &lt 1 ESC    &kp BSPC            &kp SPACE    &lt 1 RET    &RCTRL
-                  &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 1 &kp RALT
+                                                  &kp LCMD         &lt 1 ESC    &kp BSPC            &kp SPACE    &lt 1 RET    &RCTRL
                         >;
                 };
                 code_layer {
