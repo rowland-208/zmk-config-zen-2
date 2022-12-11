@@ -16,19 +16,19 @@
                 default_layer {
                         label = "DVORAK";
                         bindings = <
-   &none  &mt LS(SQT) SQT    &mt LS(COMMA) COMMA  &mt LS(DOT) DOT  &mt LS(P) P  &mt LS(Y) Y         &mt LS(F) F  &mt LS(G) G  &mt LS(C) C  &mt LS(R) R  &mt LS(L) L  &none
-   &none  &mt LS(A) A        &mt LS(O) O          &mt LS(E) E      &mt LS(U) U  &mt LS(I) I         &mt LS(D) D  &mt LS(H) H  &mt LS(T) T  &mt LS(N) N  &mt LS(S) S  &none
-   &none  &mt LS(SEMI) SEMI  &mt LS(Q) Q          &mt LS(J) J      &mt LS(K) K  &mt LS(X) X         &mt LS(B) B  &mt LS(M) M  &mt LS(W) W  &mt LS(V) V  &mt LS(Z) Z  &none
+   &mt LS(SQT) SQT    &mt LS(COMMA) COMMA  &mt LS(DOT) DOT  &mt LS(P) P  &mt LS(Y) Y         &mt LS(F) F  &mt LS(G) G  &mt LS(C) C  &mt LS(R) R  &mt LS(L) L
+   &mt LS(A) A        &mt LS(O) O          &mt LS(E) E      &mt LS(U) U  &mt LS(I) I         &mt LS(D) D  &mt LS(H) H  &mt LS(T) T  &mt LS(N) N  &mt LS(S) S
+   &mt LS(SEMI) SEMI  &mt LS(Q) Q          &mt LS(J) J      &mt LS(K) K  &mt LS(X) X         &mt LS(B) B  &mt LS(M) M  &mt LS(W) W  &mt LS(V) V  &mt LS(Z) Z
                                            &kp LCMD         &lt 1 ESC    &kp BSPC            &kp SPACE    &lt 1 RET    &kp RCTRL
                         >;
                 };
                 code_layer {
                         label = "CODE";
                         bindings = <
-   &none  &trans       &mt LS(GRAVE) GRAVE  &mt LS(FSLH) FSLH  &mt LS(BSLH) BSLH  &kp PG_UP         &mt LS(MINUS) MINUS  &mt LS(EQUAL) EQUAL  &mt LS(LBKT) LBKT  &mt LS(RBKT) RBKT  &trans       &none
-   &none  &mt LS(1) 1  &mt LS(2) 2          &mt LS(3) 3        &mt LS(4) 4        &mt LS(5) 5       &mt LS(6) 6          &mt LS(7) 7          &mt LS(8) 8        &mt LS(9) 9        &mt LS(0) 0  &none
-   &none  &kp LCTRL    &kp LALT             &kp LCMD           &kp LSHFT          &kp PG_DN         &kp TAB              &kp LEFT             &kp DOWN           &kp UP             &kp RIGHT    &none
-                          	     &trans             &none              &kp LA(BSPC)      &kp TAB              &none                &trans
+   &trans         &mt LS(GRAVE) GRAVE    &mt LS(FSLH) FSLH    &mt LS(BSLH) BSLH    &kp PG_UP           &mt LS(MINUS) MINUS    &mt LS(EQUAL) EQUAL    &mt LS(LBKT) LBKT    &mt LS(RBKT) RBKT    &trans
+   &mt LS(N1) N1  &mt LS(N2) N2          &mt LS(N3) N3        &mt LS(N4) N4        &mt LS(N5) N5       &mt LS(N6) N6          &mt LS(N7) N7          &mt LS(N8) N8        &mt LS(N9) N9        &mt LS(N0) N0
+   &kp LCTRL      &kp LALT               &kp LCMD             &kp LSHFT            &kp PG_DN           &kp TAB                &kp LEFT               &kp DOWN             &kp UP               &kp RIGHT
+                          	             &trans               &none                &kp LA(BSPC)        &kp TAB                &none                  &trans
                         >;
                 };
         };
