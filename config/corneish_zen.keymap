@@ -10,26 +10,38 @@
 };
 
 / {
-        keymap {
-                compatible = "zmk,keymap";
+    behaviors {
+    hs: hold_for_shift {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HOLD_FOR_SHIFT";
+        #binding-cells = <2>;
+        flavor = "tap-preferred";
+        tapping-term-ms = <150>;
+        quick-tap-ms = <0>;
+        bindings = <&kp>, <&kp>;
+    };
 
-                default_layer {
-                        label = "DVORAK";
-                        bindings = <
-   &mt LS(SQT) SQT    &mt LS(COMMA) COMMA  &mt LS(DOT) DOT  &mt LS(P) P  &mt LS(Y) Y         &mt LS(F) F  &mt LS(G) G  &mt LS(C) C  &mt LS(R) R  &mt LS(L) L
-   &mt LS(A) A        &mt LS(O) O          &mt LS(E) E      &mt LS(U) U  &mt LS(I) I         &mt LS(D) D  &mt LS(H) H  &mt LS(T) T  &mt LS(N) N  &mt LS(S) S
-   &mt LS(SEMI) SEMI  &mt LS(Q) Q          &mt LS(J) J      &mt LS(K) K  &mt LS(X) X         &mt LS(B) B  &mt LS(M) M  &mt LS(W) W  &mt LS(V) V  &mt LS(Z) Z
+    };
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+                label = "DVORAK";
+                bindings = <
+   &hs LS(SQT) SQT    &hs LS(COMMA) COMMA  &hs LS(DOT) DOT  &hs LS(P) P  &hs LS(Y) Y         &hs LS(F) F  &hs LS(G) G  &hs LS(C) C  &hs LS(R) R  &hs LS(L) L
+   &hs LS(A) A        &hs LS(O) O          &hs LS(E) E      &hs LS(U) U  &hs LS(I) I         &hs LS(D) D  &hs LS(H) H  &hs LS(T) T  &hs LS(N) N  &hs LS(S) S
+   &hs LS(SEMI) SEMI  &hs LS(Q) Q          &hs LS(J) J      &hs LS(K) K  &hs LS(X) X         &hs LS(B) B  &hs LS(M) M  &hs LS(W) W  &hs LS(V) V  &hs LS(Z) Z
                                            &kp LCMD         &lt 1 ESC    &kp BSPC            &kp SPACE    &lt 1 RET    &kp RCTRL
-                        >;
-                };
-                code_layer {
-                        label = "CODE";
-                        bindings = <
-   &trans         &mt LS(GRAVE) GRAVE    &mt LS(FSLH) FSLH    &mt LS(BSLH) BSLH    &kp PG_UP           &mt LS(MINUS) MINUS    &mt LS(EQUAL) EQUAL    &mt LS(LBKT) LBKT    &mt LS(RBKT) RBKT    &trans
-   &mt LS(N1) N1  &mt LS(N2) N2          &mt LS(N3) N3        &mt LS(N4) N4        &mt LS(N5) N5       &mt LS(N6) N6          &mt LS(N7) N7          &mt LS(N8) N8        &mt LS(N9) N9        &mt LS(N0) N0
-   &kp LCTRL      &kp LALT               &kp LCMD             &kp LSHFT            &kp PG_DN           &kp TAB                &kp LEFT               &kp DOWN             &kp UP               &kp RIGHT
-                          	             &trans               &none                &kp LA(BSPC)        &kp TAB                &none                  &trans
-                        >;
-                };
+                >;
         };
+        code_layer {
+                label = "CODE";
+                bindings = <
+   &trans         &hs LS(GRAVE) GRAVE    &hs LS(FSLH) FSLH    &hs LS(BSLH) BSLH    &kp PG_UP           &hs LS(MINUS) MINUS    &hs LS(EQUAL) EQUAL    &hs LS(LBKT) LBKT    &hs LS(RBKT) RBKT    &trans
+   &hs LS(N1) N1  &hs LS(N2) N2          &hs LS(N3) N3        &hs LS(N4) N4        &hs LS(N5) N5       &hs LS(N6) N6          &hs LS(N7) N7          &hs LS(N8) N8        &hs LS(N9) N9        &hs LS(N0) N0
+   &kp LCTRL      &kp LALT               &kp LCMD             &kp LSHFT            &kp PG_DN           &kp TAB                &kp LEFT               &kp DOWN             &kp UP               &kp RIGHT
+                  	                 &trans               &none                &kp LA(BSPC)        &kp TAB                &none                  &trans
+                >;
+        };
+    };
 };
