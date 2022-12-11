@@ -27,7 +27,7 @@
                         bindings = <
    &trans       &mt LS(GRAVE) GRAVE  &mt LS(FSLH) FSLH  &mt LS(BSLH) BSLH  &kp PG_UP         &mt LS(MINUS) MINUS  &mt LS(EQUAL) EQUAL  &mt LS(LBKT) LBKT  &mt LS(RBKT) RBKT  &trans
    &mt LS(1) 1  &mt LS(2) 2          &mt LS(3) 3        &mt LS(4) 4        &mt LS(5) 5       &mt LS(6) 6          &mt LS(7) 7          &mt LS(8) 8        &mt LS(9) 9        &mt LS(0) 0
-   &kp LCTRL    &kp LALT             &kp LCMD           &kp LSHFT          &kp PG_DN         &mt LS(TAB) TAB      &kp LEFT             &kp DOWN           &kp UP             &kp RIGHT
+   &kp LCTRL    &kp LALT             &kp LCMD           &kp LSHFT          &kp PG_DN         &kp TAB              &kp LEFT             &kp DOWN           &kp UP             &kp RIGHT
                           	     &trans             &none              &kp LA(BSPC)      &kp TAB              &none                &trans
                         >;
                 };
