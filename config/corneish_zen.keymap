@@ -2,6 +2,40 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+/**
+## Overview
+This keymap contains a few innovations over the standard corne-ish zen.
+It is based losely on Dvorak, with layer 0 closely resembling standard dvorak.
+Space and backspace are under the right and left thumb respectively, mirroring their effect on the cursor.
+On layer 1 space and backspace become tab and alt return, 
+which I think of like word-sized equivalents of space and backspaces.
+I rely heavily on space cadet shift which doubles our available symbols without doubling layers.
+
+It was tricky to get the modifier keys to play nicely with space cadet shift.
+The organization of the first and second layer are very intentional.
+For example, the tab key is available in two positions on the second layer.
+The position on the third row allows us to command tab with (left thumb->cmd) (right thumb->layer 1) (right index->tab).
+I put numbers on the home row and rearranged symbols like [{ and }] for better availability while coding.
+Modifier keys do not work with hs so I use kp for those.
+
+Layer 2 is intentionally difficult to get to accidentally.
+It requires holding down both layer keys.
+I use it for zmk settings only, like bluetooth connection functions. 
+
+In the keymap the layers are number in the order they are defined: 0, 1, 2, ...
+Each key definition starts with & followed by a function.
+spaces between keys are ignored.
+The keymap language is just C I think.
+
+## Glossary
+- &hs: defined by us for hold_for_shift, emit the first key if held, emit the second if pressed,
+       see zmk hold-tap behavior docs for details
+- &kp: a single key either pressed or held
+- &lt: change layer if held, emit the second if pressed
+- LA: left alt modifier, used to turn backspace into delete word
+- LS: shift modifier, this doesn't show up in most keymaps but we need it for our hs behavior
+**/ 
+
 / {
   chosen {
     //zmk,matrix_transform = &default_transform;
@@ -40,7 +74,16 @@
    &trans         &hs LS(GRAVE) GRAVE    &hs LS(FSLH) FSLH    &hs LS(BSLH) BSLH    &kp PG_UP           &hs LS(MINUS) MINUS    &hs LS(EQUAL) EQUAL    &hs LS(LBKT) LBKT    &hs LS(RBKT) RBKT    &trans
    &hs LS(N1) N1  &hs LS(N2) N2          &hs LS(N3) N3        &hs LS(N4) N4        &hs LS(N5) N5       &hs LS(N6) N6          &hs LS(N7) N7          &hs LS(N8) N8        &hs LS(N9) N9        &hs LS(N0) N0
    &kp LCTRL      &kp LALT               &kp LCMD             &kp LSHFT            &kp PG_DN           &kp TAB                &kp LEFT               &kp DOWN             &kp UP               &kp RIGHT
-                  	                 &trans               &trans               &kp LA(BSPC)        &kp TAB                &trans                 &trans
+                  	                     &trans               &lt 2 ESC            &kp LA(BSPC)        &kp TAB                &lt 2 ESC              &trans
+                >;
+        };
+        code_layer {
+                label = "CODE";
+                bindings = <
+   &bt BT_CLR     &trans         &trans         &trans         &trans              &trans    &trans    &trans    &trans    &trans
+   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4        &trans    &trans    &trans    &trans    &trans
+   &bt BT_CLR     &trans         &trans         &trans         &trans              &trans    &trans    &trans    &trans    &trans
+                                 &trans         &trans         &trans              &trans    &trans    &trans
                 >;
         };
     };
