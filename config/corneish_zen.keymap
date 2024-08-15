@@ -78,7 +78,7 @@ The keymap language is just C I think.
                         &trans         &hs LS(GRAVE) GRAVE    &hs LS(FSLH) FSLH    &hs LS(BSLH) BSLH    &kp PG_UP           &hs LS(MINUS) MINUS    &hs LS(EQUAL) EQUAL    &hs LS(LBKT) LBKT    &hs LS(RBKT) RBKT    &trans
                         &hs LS(N1) N1  &hs LS(N2) N2          &hs LS(N3) N3        &hs LS(N4) N4        &hs LS(N5) N5       &hs LS(N6) N6          &hs LS(N7) N7          &hs LS(N8) N8        &hs LS(N9) N9        &hs LS(N0) N0
                         &kp LCTRL      &kp LALT               &kp LCMD             &kp LSHFT            &kp PG_DN           &kp TAB                &kp LEFT               &kp DOWN             &kp UP               &kp RIGHT
-                  	                                         &trans               &lt SETTINGS ESC     &kp LA(BSPC)        &kp TAB                &lt SETTINGS ESC       &trans
+                  	                                         &trans               &lt SETTINGS ESC     &kp LA(BSPC)        &kp TAB                &lt SETTINGS RET       &trans
                 >;
         };
         settings_layer {
